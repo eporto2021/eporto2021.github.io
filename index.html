@@ -8,10 +8,15 @@
     <link rel="icon" href="img/favicon.png" sizes="32x32" type="image/png">
     <!-- custom.css -->
     <link rel="stylesheet" href="css/custom.css">
+    
     <!-- bootstrap.min.css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-	<!-- font-awesome -->
+	
+    <!-- font-awesome -->
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    
+    <!-- other css-->
+    <link rel="stylesheet" href="css/other.css">
     
     <!-- AOS -->
     <link rel="stylesheet" href="css/aos.css">
@@ -27,23 +32,25 @@
                         <img src="img/logo.png" alt="logo">
                     </div>
                     <div class="col-6 align-self-center text-right">
-                        <a href="#" class="text-white lead">Get Early Access</a>
+                        <a href="#" class="text-white lead">Login Or Sign Up</a>
                     </div>
                 </div>
             </header>
             <h1 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="display-3 text-white font-weight-bold my-5">
-            	A New Way<br>
-            	To Start Business
+            	Are you a Bouncing Castle Network Customer Looking for a way to automate your schedule creation?<br>
+            	
             </h1>
-            <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="lead text-white my-4">
-                Lorem ipsum dolor sit amet, id nec enim autem oblique, ei dico mentitum duo.
-                <br> Illum iusto laoreet his te. Lorem partiendo mel ex. Ad vitae admodum voluptatum per.
-            </p>
-            <a href="#" data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="btn my-4 font-weight-bold atlas-cta cta-green">Get Started</a>
+
+
+            <!-- <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="lead text-white my-4">
+                We focus on automating business processes so you can focus on more important things.
+                <br> 
+            </p> -->
+            <!-- <a href="#" data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="btn my-4 font-weight-bold atlas-cta cta-green">Schedule A Meeting</a> -->
         </div>
     </div>
     <!-- three-blcok -->
-    <div class="container my-5 py-2">
+    <!-- <div class="container my-5 py-2">
         <h2 class="text-center font-weight-bold my-5">Smartest protection for your site</h2>
         <div class="row">
             <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
@@ -62,16 +69,19 @@
                 <p>Et usu ocurreret elaboraret doctus prodesse assueverit.</p>
             </div>
         </div>
-    </div>
-    <!-- feature (skew background) -->
+    </div> -->
+
+
     <div class="jumbotron jumbotron-fluid feature" id="feature-first">
         <div class="container my-5">
             <div class="row justify-content-between text-center text-md-left">
                 <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
-                    <h2 class="font-weight-bold">Take a look inside</h2>
-                    <p class="my-4">Te iisque labitur eos, nec sale argumentum scribentur no,
-                        <br> augue disputando in vim. Erat fugit sit at, ius lorem deserunt deterruisset no.</p>
-                    <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                    <h2 class="font-weight-bold">Automation Of Driver Schedules</h2>
+                    <p class="my-4"> 
+                    Our software allows you to automate the creation of driver schedules <br>
+                    saving you time and money.
+                    </p>
+                    <button onclick="openModal()" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</button>
                 </div>
                 <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
                     <img src="img/feature-1.png" alt="Take a look inside" class="mx-auto d-block">
@@ -79,15 +89,291 @@
             </div>
         </div>
     </div>
-    <!-- feature (green background) -->
-    <div class="jumbotron jumbotron-fluid feature" id="feature-last">
+    
+    <!-- Modal overlay -->
+    <div class="modal-overlay" onclick="closeModal()">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <!-- Modal close button -->
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <!-- Modal content goes here -->
+            <h2>About the Software</h2>
+            <p>
+                Our software allows you to automate the creation of driver schedules <br>
+                saving you time and money. <br>
+                <br>
+                The software takes in order, vehicle and worker data and based on this data <br>
+                creates a schedule for a specified time period.<br>
+                <br>
+                It requires customization to fit your business needs, this customization is <br>
+                done by our team of developers. <br>
+                <br>
+                The software is a web application and can be accessed from any device with <br>
+                an internet connection. <br>
+                <br>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Function to open the modal
+        function openModal() {
+            document.querySelector('.modal-overlay').style.display = 'flex';
+        }
+    
+        // Function to close the modal
+        function closeModal() {
+            document.querySelector('.modal-overlay').style.display = 'none';
+        }
+    </script>
+    
+    <style>
+        /* Style for modal overlay */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+    
+        /* Style for modal content */
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 80%;
+            max-height: 80%;
+            overflow: auto;
+        }
+    
+        /* Style for modal close button */
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    
+        /* Style for the Learn More button */
+        .atlas-cta {
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            padding: 12px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+    
+        .atlas-cta:hover {
+            background-color: #0069d9;
+        }
+    </style>
+
+
+    <!-- <div class="jumbotron jumbotron-fluid feature" id="feature-last">
         <div class="container">
             <div class="row justify-content-between text-center text-md-left">
                 <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
-                    <h2 class="font-weight-bold">Safe and reliable</h2>
+                    <h2 class="font-weight-bold">Email Marketing</h2>
                     <p class="my-4">
-                        Duo suas detracto maiestatis ad, commodo lucilius invenire nec ad,
-                        <br> eum et oratio disputationi. Falli lobortis his ad
+                        Take your email marketing to the next level with html emails,
+                        <br> automations, and automated performance reporting.
+                    </p>
+                    <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center flex-md-first">
+                    <img src="img/feature-2.png" alt="Safe and reliable" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="jumbotron jumbotron-fluid feature" id="feature-first">
+        <div class="container my-5">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
+                    <h2 class="font-weight-bold">Automated Data Backups</h2>
+                    <p class="my-4"> Worried about losing your data? We can automate your backups to <br>
+                        ensure you never lose your data.
+                    </p>
+                    <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
+                    <img src="img/feature-1.png" alt="Take a look inside" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="jumbotron jumbotron-fluid feature" id="feature-last">
+        <div class="container">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
+                    <h2 class="font-weight-bold">Automated Invoicing</h2>
+                    <p class="my-4">
+                        Feel like you spend too much time invoicing your customers? <br>
+                        We can automate that for you.
+                    </p>
+                    <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center flex-md-first">
+                    <img src="img/feature-2.png" alt="Safe and reliable" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+<!--     
+    <div class="jumbotron jumbotron-fluid feature" id="feature-first">
+        <div class="container my-5">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
+                    <h2 class="font-weight-bold">SMS Based Marketing Automation</h2>
+                    <p class="my-4"> <br> Let us automate your SMS marketing.<br>
+                        Speak with an expert today to learn more.
+                    </p>
+                    <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
+                    <img src="img/feature-1.png" alt="Take a look inside" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+    <!-- <div class="jumbotron jumbotron-fluid feature" id="feature-last">
+        <div class="container">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
+                    <h2 class="font-weight-bold">Isochrone-Based Marketing Recommendations</h2>
+                    <p class="my-4">
+                        Never heard of an Isochrone? <br>
+                        We can use them to help you make better marketing decisions.
+                    </p>
+                    <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center flex-md-first">
+                    <img src="img/feature-2.png" alt="Safe and reliable" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+
+    <!-- <div class="jumbotron jumbotron-fluid feature" id="feature-first">
+        <div class="container my-5">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
+                    <h2 class="font-weight-bold"> Social Campaign Automation</h2>
+                    <p class="my-4"> Whether its Google, Facebook, Tik Tok and more<br>
+                        Run campaigns in an automated way, and get more out of your marketing spend.
+                    </p>
+                    <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
+                    <img src="img/feature-1.png" alt="Take a look inside" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+    <!-- <div class="jumbotron jumbotron-fluid feature" id="feature-last">
+        <div class="container">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
+                    <h2 class="font-weight-bold">Policy Management</h2>
+                    <p class="my-4">
+                        Do you have an every growing list of policies <br>
+                        that you need to keep track of, enforce, update <br>
+                        and teach to others? Our portal stores all of your <br>
+                        policies in one place and allows your team to easily <br>
+                        access them.
+                    </p>
+                    <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center flex-md-first">
+                    <img src="img/feature-2.png" alt="Safe and reliable" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+<!-- 
+    <div class="jumbotron jumbotron-fluid feature" id="feature-first">
+        <div class="container my-5">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
+                    <h2 class="font-weight-bold"> In Person Up-selling Plan Creation</h2>
+                    <p class="my-4"> Create a plan automatically based on<br>
+                        existing order data and take advantage of more   <br>
+                        up-sell opportunities.
+                    </p>
+                    <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
+                    <img src="img/feature-1.png" alt="Take a look inside" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+    
+    <!-- <div class="jumbotron jumbotron-fluid feature" id="feature-last">
+        <div class="container">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
+                    <h2 class="font-weight-bold">Reconcilation Automation</h2>
+                    <p class="my-4">
+                        Put your reconcilation process on auto-pilot<br>
+                        with a driver portal that allows drivers to<br>
+                        fill out a reconcilation report for their shift.<br>
+                        A report is then compiled automatically and accessible <br>
+                        through the employee portal.
+                    </p>
+                    <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center flex-md-first">
+                    <img src="img/feature-2.png" alt="Safe and reliable" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- <div class="jumbotron jumbotron-fluid feature" id="feature-first">
+        <div class="container my-5">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
+                    <h2 class="font-weight-bold"> Driver Performance Management</h2>
+                    <p class="my-4">Track driver performance and provide <br>
+                        feedback to drivers based on their performance.  <br>
+                        In many cases, the act of tracking performance <br>
+                        alone will lead to peformance improvements.
+                    </p>
+                    <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
+                    <img src="img/feature-1.png" alt="Take a look inside" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+    
+    <!-- <div class="jumbotron jumbotron-fluid feature" id="feature-last">
+        <div class="container">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
+                    <h2 class="font-weight-bold">New</h2>
+                    <p class="my-4">
+                        new
                     </p>
                     <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
                 </div>
@@ -97,9 +383,34 @@
             </div>
         </div>
     </div>
+     -->
+
+    
+     <!-- Create a container that has a Button called get your free trial
+    in the centre of it, just below a title that says "Get started with a free trial"
+    -->
+    <div class="jumbotron jumbotron-fluid" id="get-started">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-8">
+                    <h2 class="font-weight-bold">Get started with a 30-day free trial</h2>
+                    <p class="my-4"> 
+                    No card details needed and we won't charge you after your free trial period!<br>
+                    The free trial begins after we have customized the software to your business,<br>
+                    the hourly rate we charge for this work is $50/hr, which we will give to you <br>
+                    for free.
+                    </p>
+                    <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Get your free trial</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <!-- price table -->
-    <div class="container my-5 py-2" id="price-table">
+    <!-- <div class="container my-5 py-2" id="price-table">
         <h2 class="text-center font-weight-bold d-block mb-3">Check our pricing</h2>
         <div class="row">
             <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
@@ -136,9 +447,9 @@
                 <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get Free</a>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- client -->
-    <div class="jumbotron jumbotron-fluid">
+    <!-- <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 col-md-2 py-2 align-self-center">
@@ -161,7 +472,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- contact -->
     <div class="jumbotron jumbotron-fluid" id="contact" style="background-image: url(img/contact-bk.jpg);">
         <div class="container my-5">
@@ -169,13 +480,13 @@
                 <div class="col-md-6 text-white">
                     <h2 class="font-weight-bold">Contact Us</h2>
                     <p class="my-4">
-                        Te iisque labitur eos, nec sale argumentum scribentur,
-                        <br> augue disputando in vim. Erat fugit sit at, ius lorem.
+                        We are here to help and answer any question you might have. 
+                        <br> We look forward to hearing from you.
                     </p>
                     <ul class="list-unstyled">
-                        <li>Email : company_email@com</li>
-                        <li>Phone : 361-688-5824</li>
-                        <li>Address : 4826 White Avenue, Corpus Christi, Texas</li>
+                        <li>Email : admin@eporto.com.au</li>
+                        <li>Phone : 0402911136</li>
+                        <li>Address : Annerly QLD</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
@@ -206,9 +517,10 @@
         <div class="container">
             <div class="row justify-content-between">
             	<div class="col-md-6 text-white align-self-center text-center text-md-left my-2">
-                    Copyright © 2018 Chen, Yi-Ya.
+                    Copyright © 2023 Eporo Pty Ltd.
                 </div>
-                <div class="col-md-6 align-self-center text-center text-md-right my-2" id="social-media">
+    <!-- Socials -->
+                <!-- <div class="col-md-6 align-self-center text-center text-md-right my-2" id="social-media">
                     <a href="#" class="d-inline-block text-center ml-2">
                     	<i class="fa fa-facebook" aria-hidden="true"></i>
                     </a>
@@ -224,7 +536,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     
     <!-- AOS -->
     <script src="js/aos.js"></script>
